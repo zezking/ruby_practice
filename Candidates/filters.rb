@@ -2,19 +2,18 @@
 # This way, we keep these methods separated from other potential parts of the program
 
 def find(id)
-  # Your code Here
- 
+
 return candidates.detect{|candidate| candidate[:id]==id }
 
 end
 
 def experienced?(candidate)
-  # Your code Here
+
   return candidate[:years_of_experience]>2 ? true:false
 end
 
 def qualified_candidates(candidates)
-  # Your code Here
+  # This is really ugly
   candidates.select{|candidate| experienced?(candidate)&&github_points?(candidate)&&applied_15?(candidate)&&over17?(candidate)&&ruby_python?(candidate)}
 end
 
@@ -35,9 +34,10 @@ def applied_15?(candidate)
 end
   
 def over17?(candidate)
-  #use the date time now object subtract the days ago object and use.to_i to convert it to integer
+
   return candidate[:age]>17 ? true:false
 end
+
 def ordered_by_qualifications(candidates)
 
    (candidates.sort { |b, a| [b[:years_of_experience], b[:github_points]] <=> [a[:years_of_experience], a[:github_points]] }).reverse
