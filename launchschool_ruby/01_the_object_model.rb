@@ -11,6 +11,9 @@ module Eat
 end
 
 class GoodDog
+    def initialize
+        puts "This opbject was initialzed"
+    end
     include Speak
 end
 
@@ -36,3 +39,4 @@ puts GoodDog.ancestors
 puts ''
 puts "--HumanBeing ancestors---"
 puts HumanBeing.ancestors
+
