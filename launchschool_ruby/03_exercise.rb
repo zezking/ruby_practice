@@ -5,8 +5,8 @@ class MyCar
             @color=c
             @model=m
             @speed=0
-            @@gas=5
-            @@mileage=2
+            @@gas=0
+            @@mileage=0
         end
     
         def speed
