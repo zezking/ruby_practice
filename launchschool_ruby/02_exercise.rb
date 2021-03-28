@@ -22,6 +22,7 @@ attr_accessor :year, :color,:model
     def shutdown
         @speed==0 ? "It's already not going anywhere stoooopid" : @speed=0
     end
+    
     def change_color(c)
         self.color=c
     end
