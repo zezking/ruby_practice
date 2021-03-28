@@ -43,8 +43,10 @@ class MyCar
             @@gas=gets.to_i
             puts "Enter how far you have travelled in miles:  ?"
             @@mileage=gets.to_i
-            puts "Your millege is #{@@gas/@@mileage}  
-      
+            puts "Your millege is #{@@gas/@@mileage}"  
+        end
+        def to_s
+            puts "welcome to car generator!"
         end
     end
     
@@ -52,4 +54,16 @@ class MyCar
     newCar=MyCar.new("2009", "Rainbow", "QQ")
 
 puts newCar.info
-    MyCar.gas_mileage
+MyCar.gas_mileage
+puts newCar
+
+
+class Person
+    attr_accessor :name
+    def initialize(n)
+      @name = n
+    end
+  end
+  
+  bob = Person.new("Steve")
+bob.name="Bob"
